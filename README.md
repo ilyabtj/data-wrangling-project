@@ -1,21 +1,37 @@
-# Data Wrangling Project
+# Food Survey Data Wrangling Project
 
 ## Deskripsi
-Project ini melakukan wrangling data food survey menggunakan Python (pandas) dan SQL (PostgreSQL). Dataset di-cleaning menggunakan Python, lalu di-import ke PostgreSQL untuk dilakukan query dan wrangling menggunakan SQL.
+Proyek ini melakukan data wrangling pada dataset food survey menggunakan Python dan PostgreSQL.  
+Data dibersihkan di Python, lalu diimpor ke PostgreSQL untuk eksplorasi dan wrangling menggunakan query SQL.
 
-## Struktur Folder
-- `data/`: dataset asli & cleaned
-- `notebook/`: Jupyter Notebook wrangling Python
-- `sql/`: file DDL dan query wrangling SQL
+## Struktur File
+- `food_coded.csv` : Dataset asli (raw)
+- `food_coded_clean.csv` : Dataset setelah cleaning (bersih)
+- `main.ipynb` : Script Python Jupyter Notebook (wrangling & cleaning)
+- `ddl_insert_data.sql` : Script SQL DDL untuk membuat tabel dan struktur database
+- `sql_data_wrangling.sql` : Script SQL untuk data wrangling/analisis (query select, agregasi, dsb.)
+
+## Langkah Proses
+1. **Data Cleaning (Python)**
+   - Cek missing value, cleaning data, convert tipe data jika perlu.
+   - Simpan hasil bersih ke `food_coded_clean.csv`.
+2. **Database (PostgreSQL)**
+   - Buat tabel sesuai struktur dengan script `ddl_insert_data.sql`.
+   - Import data cleaned ke database.
+3. **SQL Wrangling**
+   - Analisis dan eksplorasi data dengan query di `sql_data_wrangling.sql`.
 
 ## Tools
-- Python 3.x (`pandas`)
+- Python (pandas)
+- Jupyter Notebook
 - PostgreSQL
-- DBeaver
-
-## Langkah Besar
-1. **Python**: data cleaning, handling missing value, export ke CSV
-2. **PostgreSQL**: CREATE TABLE, import data cleaned, SQL wrangling
+- DBeaver (untuk import & eksplorasi data)
 
 ## Author
-(Nama, batch/angkatan, dll - opsional)
+Ilya Aryaputra  
+Bangunindo Data Academy
+
+---
+
+> **Catatan:**  
+> Semua file pada repo ini bisa langsung digunakan untuk reference wrangling data dengan Python dan SQL.
